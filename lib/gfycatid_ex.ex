@@ -3,16 +3,27 @@ defmodule GfycatidEx do
   Documentation for GfycatidEx.
   """
 
+  alias GfycatidEx.{Animals, Adjectives}
+
   @doc """
-  Hello world.
+  Generate gfycatid.
 
   ## Examples
 
-      iex> GfycatidEx.hello
-      :world
+      iex> GfycatidEx.generate()
+      "YellowRoundHorse"
 
   """
-  def hello do
-    :world
+  def generate(adjective_count \\ 2, delimiter \\ "") do
+    max_adjectives = Adjectives.list() |> Enum.count()
+
+    adjectives =
+      for _ <- 1..adjective_count,
+          do: Enum.at(Adjectives.list(), :rand.uniform(max_adjectives) - 1)
+
+    animal = Enum.at(Animals.list(), :rand.uniform(Enum.count(Animals.list()) - 1))
+
+    (adjectives ++ [animal])
+    |> Enum.join(delimiter)
   end
 end
