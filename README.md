@@ -1,21 +1,33 @@
 # GfycatidEx
 
-**TODO: Add description**
+Generates human readable [Gfycat](http://gfycat.com) style URL id in the form of `AdjectiveAdjectiveAnimal`.
+
+## Usage
+
+```
+alias GfycatidEx, as: Gfycat
+
+iex(1)> Gfycat.generate()
+"AlienatedGleamingBedbug"
+
+iex(2)> Gfycat.generate(6)
+"MildLightyellowWingedGummyAbandonedIndianredIridescentshark"
+
+iex(3)> Gfycat.generate(3, "_")
+"Superficial_Intentional_Jumpy_Icelandichorse"
+
+```
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+The package can be installed
 by adding `gfycatid_ex` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:gfycatid_ex, "~> 0.1.0"}
+    {:gfycatid_ex, git: "git@github.com:seymores/gfycatid_ex.git"}
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/gfycatid_ex](https://hexdocs.pm/gfycatid_ex).
 

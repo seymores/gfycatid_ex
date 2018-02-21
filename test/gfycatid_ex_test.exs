@@ -3,11 +3,11 @@ defmodule GfycatidExTest do
   doctest GfycatidEx
 
   test "get Adjectives.list" do
-    assert GfycatidEx.Adjectives.list() |> Enum.count() == 1129
+    assert GfycatidEx.Adjectives.list() |> Enum.count() == 1502
   end
 
   test "get Animals.list" do
-    assert GfycatidEx.Animals.list() |> Enum.count() == 224
+    assert GfycatidEx.Animals.list() |> Enum.count() == 1750
   end
 
   test "generate with default params" do
