@@ -2,6 +2,8 @@
 
 Generates human readable [Gfycat](http://gfycat.com) style URL id in the form of `AdjectiveAdjectiveAnimal`.
 
+Note this project uses a slightly modified Gfycat's asset [adjectives](http://assets.gfycat.com/adjectives) and [animal](http://assets.gfycat.com/animals) word list.
+
 ## Usage
 
 ```
