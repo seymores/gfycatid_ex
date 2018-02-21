@@ -15,13 +15,8 @@ defmodule GfycatidEx do
 
   """
   def generate(adjective_count \\ 2, delimiter \\ "") do
-    max_adjectives = Adjectives.list() |> Enum.count()
-
-    adjectives =
-      for _ <- 1..adjective_count,
-          do: Enum.at(Adjectives.list(), :rand.uniform(max_adjectives) - 1)
-
-    animal = Enum.at(Animals.list(), :rand.uniform(Enum.count(Animals.list()) - 1))
+    adjectives = for _ <- 1..adjective_count, do: Adjectives.get_random()
+    animal = Animals.get_random()
 
     (adjectives ++ [animal])
     |> Enum.join(delimiter)

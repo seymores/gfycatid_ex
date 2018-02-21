@@ -10,6 +10,16 @@ defmodule GfycatidExTest do
     assert GfycatidEx.Animals.list() |> Enum.count() == 1750
   end
 
+  test "Adjectives.get_random()" do
+    assert !is_nil(GfycatidEx.Adjectives.get_random())
+    assert GfycatidEx.Adjectives.get_random() != ""
+  end
+
+  test "Animals.get_random()" do
+    assert !is_nil(GfycatidEx.Animals.get_random())
+    assert GfycatidEx.Animals.get_random() != ""
+  end
+
   test "generate with default params" do
     [adj1, adj2, anim] = GfycatidEx.generate() |> String.split(~r/(?=[A-Z])/, trim: true)
     assert Enum.member?(GfycatidEx.Adjectives.list(), adj1)

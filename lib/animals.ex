@@ -1039,7 +1039,7 @@ defmodule GfycatidEx.Animals do
     Lunamoth
     Lungfish
     Lynx
-    LynxÂ 
+    LynxÂ
     Macaque
     Macaw
     Macropod
@@ -1109,7 +1109,7 @@ defmodule GfycatidEx.Animals do
     Mongoose
     Mongrel
     Monkey
-    MonkfishÂ 
+    MonkfishÂ
     Monoclonius
     Montanoceratops
     Moorhen
@@ -1751,5 +1751,17 @@ defmodule GfycatidEx.Animals do
     Zopilote
     Zorilla/
 
+  @asset_count Enum.count(@assets)
+
+  @doc """
+  Returns a random animal word.
+  """
+  def get_random() do
+    Enum.at(list(), :rand.uniform(@asset_count)-1)
+  end
+
+  @doc """
+  Returns the animal word list.
+  """
   def list, do: @assets
 end

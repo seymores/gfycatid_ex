@@ -1504,5 +1504,17 @@ defmodule GfycatidEx.Adjectives do
     Yellow
     Yellowgreen/
 
+  @asset_count Enum.count(@assets)
+
+  @doc """
+  Returns a random adjective word.
+  """
+  def get_random() do
+    Enum.at(list(), :rand.uniform(@asset_count) - 1)
+  end
+
+  @doc """
+  Returns the adjective word list.
+  """
   def list, do: @assets
 end
