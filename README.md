@@ -6,7 +6,7 @@ Note this project uses a slightly modified Gfycat's asset [adjectives](http://as
 
 ## Usage
 
-```
+```elixir
 alias GfycatidEx, as: Gfycat
 
 iex(1)> Gfycat.generate()
