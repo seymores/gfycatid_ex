@@ -1510,7 +1510,18 @@ defmodule GfycatidEx.Adjectives do
   Returns a random adjective word.
   """
   def get_random() do
-    Enum.at(list(), :rand.uniform(@asset_count) - 1)
+    get(:rand.uniform(@asset_count)-1)
+  end
+
+  @doc """
+  Returns the adjective word specified by the given index.
+  """
+  def get(index) when is_integer(index) do
+    if index > @asset_count do
+      raise "Invalid index, must be between 0 and #{@asset_count}"
+    else
+      Enum.at(list(), index)
+    end
   end
 
   @doc """

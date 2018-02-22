@@ -9,6 +9,16 @@ defmodule GfycatidExTest do
   test "get Animals.list" do
     assert GfycatidEx.Animals.list() |> Enum.count() == 1750
   end
+  
+  test "Adjectives.get()" do
+    assert !is_nil(GfycatidEx.Adjectives.get(0))
+    assert GfycatidEx.Adjectives.get(200) != ""
+  end
+
+  test "Animals.get()" do
+    assert !is_nil(GfycatidEx.Animals.get(10))
+    assert GfycatidEx.Animals.get(100) != ""
+  end
 
   test "Adjectives.get_random()" do
     assert !is_nil(GfycatidEx.Adjectives.get_random())

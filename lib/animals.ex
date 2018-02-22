@@ -1757,9 +1757,20 @@ defmodule GfycatidEx.Animals do
   Returns a random animal word.
   """
   def get_random() do
-    Enum.at(list(), :rand.uniform(@asset_count)-1)
+    get(:rand.uniform(@asset_count)-1)
   end
 
+  @doc """
+  Returns the animal word by the specified index.
+  """
+  def get(index) when is_integer(index) do
+    if index > @asset_count do
+      raise "Invalid index, must be between 0 and #{@asset_count}"
+    else
+      Enum.at(list(), index)
+    end
+  end
+  
   @doc """
   Returns the animal word list.
   """

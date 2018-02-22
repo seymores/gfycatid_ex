@@ -21,4 +21,5 @@ defmodule GfycatidEx do
     (adjectives ++ [animal])
     |> Enum.join(delimiter)
   end
+
 end
