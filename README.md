@@ -18,7 +18,17 @@ iex(2)> Gfycat.generate(6)
 iex(3)> Gfycat.generate(3, "_")
 "Superficial_Intentional_Jumpy_Icelandichorse"
 
+iex(4)> Gfycat.Adjectives.get(1)
+"Black"
+
+iex(5)> Gfycat.Animals.get(10)
+"Rabbit"
+
+# You can create your own gfycatID with your own index generator
+iex(6)> GfycatidEx.Adjectives.get(1) <> GfycatidEx.Adjectives.get(10) <> GfycatidEx.Animals.get(1)
+"AbleAcrobaticAardwolf"
 ```
+
 
 ## Installation
 
